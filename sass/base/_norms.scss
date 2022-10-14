@@ -1,0 +1,22 @@
+body,
+body * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: $font-size-default;
+	font-family: $font-html;
+}
+
+li {
+	list-style-type: none;
+}
+
+a,
+a:active,
+a:visited {
+	color: $color-default-visible;
+	text-decoration: none;
+}

@@ -1,3 +1,25 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$color-default-visible: black;
+$color-default-invisible: white;
+$color-footer-background: #343434;
+
+$font-size-default: 14px;
+$font-html: 'Roboto';
+$font-titles: 'Shrikhand';
+
+$header__logo-width: 165px;
+$header__back-button-size: 1.4rem;
+$header-padding: 1.3rem 1.5rem .8rem 1.5rem;
+$header-box-shadow: 0 0 .3rem $color-default-visible;
+
+$footer__title-margin-bottom: 1.1rem;
+$footer__title-font-size: 1.25rem;
+$footer-font-size: 1.1rem;
+$footer__icon--partner-stretch: scaleX(.7);
+$footer__icon--restaurant-stretch: scaleX(1);
+$footer__icon--partner-margin-right: .2rem;
+$footer__icon--restaurant-margin-right: .6rem;
+$footer-list-margin-bottom: .3rem;
+$footer-padding: 1.5rem 1.5rem 2.3rem 1.5rem;

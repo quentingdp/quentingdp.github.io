@@ -1,0 +1,5 @@
+/*This function calculates even right and left margin to allow a unique element of a container to be centered horizontally by having its width + its left and right margins = 100% of the parent's width*/
+@function fill-margin-left-right-to-parent ($width) {
+	$margin-side: calc((100% - $width)/2);
+	@return $margin-side;
+}
