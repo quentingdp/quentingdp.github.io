@@ -1,0 +1,12 @@
+.restaurants {
+	background-color: $color-main-background;
+	padding: $restaurants-padding;
+
+	h2 {
+		font-size: $restaurants-header-size;
+	}
+
+	&__card {
+		margin-top: $restaurants-card-card-gap;
+	}
+}

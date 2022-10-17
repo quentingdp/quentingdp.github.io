@@ -3,7 +3,10 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-default-visible: black;
 $color-default-invisible: white;
+$color-main-background: #F7F7F7;
 $color-footer-background: #343434;
+$color-flag-new-background: #92E2D0;
+$color-flag-new-text: #008868;
 
 $font-size-default: 14px;
 $font-html: 'Roboto';
@@ -13,6 +16,28 @@ $header__logo-width: 165px;
 $header__back-button-size: 1.4rem;
 $header-padding: 1.3rem 1.5rem .8rem 1.5rem;
 $header-box-shadow: 0 0 .3rem $color-default-visible;
+
+$heart-size: 2rem;
+$heart-transition-duration: 200ms;
+$heart-transition-delay: 0s;
+$heart-transition-pattern: ease-out;
+
+$restaurants-padding: 4rem 1.5rem 4.5rem 1.5rem;
+$restaurants-header-size: 1.8rem;
+$restaurants-card-card-gap: 1.3rem;
+$restaurants__card-height: 251px;
+$restaurants__card-image-ratio: 69%;
+$restaurants__card-radius: 1.1rem;
+$restaurants__card-box-shadow: 0 .3rem .4rem darken($color-main-background, 8%);
+$restaurants__card--new-padding: .5rem 1rem;
+$restaurants__card--new-margin: 1rem;
+$restaurants__card--new-font-weight: 600;
+$restaurants__card--new-border-radius: .2rem;
+$restaurants__card__description-padding: .9rem 1rem .9rem 1rem;
+$restaurants__card-title-size: 1.3rem;
+$restaurants__card-title-bottom-margin: .3rem;
+$restaurants__card-location-size: 1.15rem;
+
 
 $footer__title-margin-bottom: 1.1rem;
 $footer__title-font-size: 1.25rem;

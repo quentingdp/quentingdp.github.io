@@ -1,0 +1,60 @@
+.restaurants {
+	&__card {
+		display: block;
+		display: flex;
+		flex-direction: column;
+		height: $restaurants__card-height;
+		border-radius: $restaurants__card-radius;
+		box-shadow: $restaurants__card-box-shadow;
+		position: relative;
+
+		&__description {
+			display: flex;
+			justify-content: space-between;
+			height: complementary-ratio($restaurants__card-image-ratio);
+			background-color: $color-default-invisible;
+			border-bottom-left-radius: $restaurants__card-radius;
+			border-bottom-right-radius: $restaurants__card-radius;
+			padding: $restaurants__card__description-padding;
+
+			h3 {
+				font-size: $restaurants__card-title-size;
+				font-weight: bold;
+				padding-bottom: $restaurants__card-title-bottom-margin;
+			}
+
+			p {
+				font-size: $restaurants__card-location-size;
+			}
+		}
+
+		&__logo {
+			align-self: center;
+		}
+
+		&--new {
+			position: absolute;
+			align-self: flex-end;
+			z-index: 1;
+			margin: $restaurants__card--new-margin;
+			padding: $restaurants__card--new-padding;
+			background-color: $color-flag-new-background;
+			color: $color-flag-new-text;
+			font-weight: $restaurants__card--new-font-weight;
+			border-radius: $restaurants__card--new-border-radius;
+		}
+	}
+
+	&__img {
+		height: $restaurants__card-image-ratio;
+		width: 100%;
+
+		img {
+			height: 100%;
+			width: 100%;
+			border-top-left-radius: $restaurants__card-radius;
+			border-top-right-radius: $restaurants__card-radius;
+			object-fit: cover;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.heart {
+	font-size: $heart-size;
+	background-size: 100% 0%;
+	-webkit-text-stroke: 1px $color-default-visible;
+	color: transparent;
+	transition: background-size $heart-transition-duration $heart-transition-delay $heart-transition-pattern;
+
+	&:hover {
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-image: linear-gradient(180deg, $color-primary, $color-secondary);
+		-webkit-text-stroke: unset;
+		background-clip: text;
+		-webkit-background-clip: text;
+	}
+}
