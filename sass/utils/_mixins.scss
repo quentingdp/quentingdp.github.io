@@ -5,3 +5,16 @@
 	text-align: center;
 	padding-top: calc(($radius / 2) - .5rem);
 }
+
+@mixin up-rounded-stall ($radius) {
+	position: relative;
+	top: - $radius;
+	border-top-left-radius: $radius;
+	border-top-right-radius: $radius;
+}
+
+@mixin single-line-overflow {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}

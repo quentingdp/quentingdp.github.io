@@ -1,0 +1,61 @@
+.restaurant-picture {
+	width: 100%;
+	height: $restaurant-picture-height;
+	object-fit: cover;
+}
+
+.menu {
+	&__title {
+		@include up-rounded-stall($menu-stall-size);
+		background-color: $color-main-background;
+		padding: $menu-title-padding;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		h1 {
+			font-family: $font-titles;
+			font-size: $menu-title-size;
+		}
+	}
+
+	&__category {
+		@include up-rounded-stall($menu-category-offset);
+		width: 100%;
+		margin-bottom: $menu-category-category-gap;
+	}
+
+	.button {
+		position: relative;
+		top: - $menu-category-offset;
+		padding: $menu-button-padding;
+	}
+
+	h2 {
+		padding: $menu-category-title-padding;
+		display: flex;
+		flex-direction: column;
+		text-transform: uppercase;
+		font-size: $menu-category-title-size;
+		font-weight: normal;
+
+		&::after {
+			content: "";
+			height: map-get($menu-category-title-underlying, height);
+			width: map-get($menu-category-title-underlying, width);
+			margin-top: map-get($menu-category-title-underlying, top-margin);
+			background-color: $color-tertiary;
+		}
+	}
+
+	.dish-card {
+		margin: $menu-card-margin;
+	}
+
+	background-color: $color-main-background;
+	padding-bottom: $menu-padding-bottom;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

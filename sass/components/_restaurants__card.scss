@@ -5,7 +5,7 @@
 		flex-direction: column;
 		height: $restaurants__card-height;
 		border-radius: $restaurants__card-radius;
-		box-shadow: $restaurants__card-box-shadow;
+		box-shadow: $card-box-shadow;
 		position: relative;
 
 		&__description {

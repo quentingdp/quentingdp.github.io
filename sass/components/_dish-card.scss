@@ -1,0 +1,28 @@
+.dish-card {
+	border-radius: $dish-card-radius;
+	box-shadow: $card-box-shadow;
+	background-color: $color-default-invisible;
+	display: flex;
+	flex-direction: column;
+
+	h3 {
+		padding: map-get($dish-card-padding, top) map-get($dish-card-padding, right) map-get($dish-card-padding, title-details-gap) map-get($dish-card-padding, left);
+		font-size: $dish-card-title-size;
+	}
+
+	&__details {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 map-get($dish-card-padding, right) map-get($dish-card-padding, bottom) map-get($dish-card-padding, left);
+	}
+
+	&__complement {
+		font-size: $dish-card-complement-size;
+		@include single-line-overflow;
+	}
+
+	&__price {
+		font-weight: bold;
+		font-size: $dish-card-price-size;
+	}
+}

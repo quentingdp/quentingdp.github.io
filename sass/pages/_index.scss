@@ -35,6 +35,10 @@
 			padding: $presentation-text-padding;
 			color: lighten10($color-footer-background);
 		}
+
+		.button {
+			padding: $presentation-button-padding;
+		}
 	}
 }
 
