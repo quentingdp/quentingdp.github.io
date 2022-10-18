@@ -1,0 +1,14 @@
+.button {
+	color: $color-default-invisible;
+	background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+	padding: $button-padding;
+	border-radius: $button-radius;
+	border: none;
+	box-shadow: $button-shadow;
+	font-size: $button-text-size;
+
+	&:hover {
+		background-image: linear-gradient(0deg, lighten10($color-primary), lighten10($color-secondary));
+		box-shadow: $button-shadow--darken;
+	}
+}

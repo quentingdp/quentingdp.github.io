@@ -20,3 +20,11 @@ a:visited {
 	color: $color-default-visible;
 	text-decoration: none;
 }
+
+input {
+	border: none;
+}
+
+input:focus {
+	outline: none;
+}

@@ -4,7 +4,23 @@
 	@return $margin-side;
 }
 
+@function fill-margin-top-bottom-to-parent ($height) {
+	$margin-side: calc((100% - $height)/2);
+	@return $margin-side;
+}
+
 @function complementary-ratio ($ratio) {
 	$complementary: calc(100% - $ratio);
 	@return $complementary;
+}
+
+@function lighten10 ($color) {
+	$lighten-color: lighten($color, 10%);
+	@return $lighten-color;
+}
+
+@function left-position-howto-number ($parent-margin-list, $number-diameter) {
+	$parent-left-margin: nth($parent-margin-list, 4);
+	$left-position: calc($parent-left-margin - ($number-diameter / 2));
+	@return $left-position;
 }

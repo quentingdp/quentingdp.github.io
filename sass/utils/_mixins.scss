@@ -1,0 +1,7 @@
+@mixin circle-box ($radius) {
+	height: $radius;
+	width: $radius;
+	border-radius: calc($radius / 2);
+	text-align: center;
+	padding-top: calc(($radius / 2) - .5rem);
+}
