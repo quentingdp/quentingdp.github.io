@@ -24,6 +24,19 @@
 		@include up-rounded-stall($menu-category-offset);
 		width: 100%;
 		margin-bottom: $menu-category-category-gap;
+
+		@for $categoryid from 2 through 4 {
+			@for $cardid from 1 through 4 {
+				$duration: 600ms;
+				$offset: calc($duration / 4);
+				/*Formula to offset the cards of Entrées, then Plats, then Desserts*/
+				$delay: calc($offset * (($categoryid - 2) * 4 + $cardid + 1));
+
+				&:nth-of-type(#{$categoryid}) .dish-card:nth-of-type(#{$cardid}) {
+					animation: card-fade-in $duration $delay ease-out backwards;
+				}
+			}
+		}
 	}
 
 	.button {
@@ -58,4 +71,16 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+@keyframes card-fade-in {
+	from {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }

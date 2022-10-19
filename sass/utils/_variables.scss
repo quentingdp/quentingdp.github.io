@@ -83,6 +83,7 @@ $menu-category-category-gap: 2.6rem;
 $menu-button-padding: 1.1rem 3.5rem;
 
 $dish-card-radius: 1.2rem;
+$dish-card-height: 67px;
 $dish-card-padding: (
 	top:.8rem,
 	right:1.6rem,
@@ -93,6 +94,10 @@ $dish-card-padding: (
 $dish-card-title-size: 1.3rem;
 $dish-card-complement-size: 1.05rem;
 $dish-card-price-size: 1rem;
+$dish-card-transition-properties: 400ms 0s ease-out;
+$dish-card-min-width-ratio: 79%;
+$dish-card-check-size: 2rem;
+$dish-card-check-left-margin: 1.7rem;
 
 $footer__title-margin-bottom: 1.1rem;
 $footer__title-font-size: 1.25rem;
