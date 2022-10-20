@@ -1,3 +1,4 @@
+/*Inner properties of heart icons*/
 .heart {
 	font-size: $heart-size;
 	background-size: 100% 0%;
@@ -9,6 +10,7 @@
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		background-position: bottom;
+		/*Following properties, altogether, are showing the background only where the text is. In addition with "color:transparent" define below, we "see" the background shaped like the heart text char*/
 		background-image: linear-gradient(180deg, $color-primary, $color-secondary);
 		-webkit-text-stroke: unset;
 		background-clip: text;

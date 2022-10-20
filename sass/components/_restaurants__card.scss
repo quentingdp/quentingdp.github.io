@@ -1,3 +1,4 @@
+/*Inner properties of .restaurants__card elements*/
 .restaurants {
 	&__card {
 		display: block;
@@ -35,6 +36,7 @@
 		&--new {
 			position: absolute;
 			align-self: flex-end;
+			/*Flag "New" displayed on top of the card (only the loading spinner, with z-index: 2 is more prioritary)*/
 			z-index: 1;
 			margin: $restaurants__card--new-margin;
 			padding: $restaurants__card--new-padding;

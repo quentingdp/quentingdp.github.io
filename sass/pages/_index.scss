@@ -1,7 +1,19 @@
+/*Layout properties of main page*/
 .section-explore-restaurants {
 	&__city {
 		background-color: $color-search-background;
 		padding: $explore-padding;
+
+		@include on-tablet {
+			display: flex;
+			justify-content: center;
+		}
+
+		@include on-desktop {
+			display: flex;
+			justify-content: center;
+		}
+
 
 		label {
 			margin-right: $explore-logo-input-gap;
@@ -92,11 +104,41 @@
 	background-color: $color-main-background;
 	padding: $restaurants-padding;
 
+	@include on-tablet {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	@include on-desktop {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
 	h2 {
 		font-size: $restaurants-header-size;
+
+		@include on-tablet {
+			width: 100%
+		}
+
+		@include on-desktop {
+			width: 100%
+		}
 	}
 
 	&__card {
 		margin-top: $restaurants-card-card-gap;
+
+		@include on-tablet {
+			width: 47%;
+		}
+
+		@include on-desktop {
+			width: 30%;
+		}
 	}
 }

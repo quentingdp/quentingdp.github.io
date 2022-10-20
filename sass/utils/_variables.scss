@@ -1,3 +1,5 @@
+/*Defining variables used all over scss files. Regrouped by category*/
+/*Colors used*/
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -10,27 +12,53 @@ $color-howto-hovered-background: #F5EDFF;
 $color-footer-background: #343434;
 $color-flag-new-text: #008868;
 
+/*Fonts family and default size used. In the rest of project, mainly rem units will be used, based on these basic properties*/
 $font-size-default: 14px;
 $font-html: 'Roboto';
 $font-titles: 'Shrikhand';
 
+/*Loading spinner properties*/
+$loading-spinner-duration: 2s;
+$loading-spinner-loop-duration: 400ms;
+$loading-spinner-size: 3rem;
+
+/*Header properties*/
 $header__logo-width: 165px;
 $header__back-button-size: 1.4rem;
 $header-padding: 1.3rem 1.5rem .8rem 1.5rem;
 $header-box-shadow: 0 0 .3rem darken($color-search-background, 40%);
 
+/*Components properties (button, heart, cards)*/
 $button-radius: 1.9rem;
 $button-text-size: 1.15rem;
 $button-shadow: 0 .2rem .3rem .2rem darken($color-main-background, 10%);
 $button-shadow--darken: 0 .2rem .3rem .2rem darken($color-main-background, 30%);
-
 $heart-size: 2rem;
 $heart-transition-duration: 200ms;
 $heart-transition-delay: 0s;
 $heart-transition-pattern: ease-out;
-
 $card-box-shadow: 0 .3rem .4rem darken($color-main-background, 8%);
+$dish-card-radius: 1.2rem;
+$dish-card-height: 67px;
+$dish-card-padding: (
+	top:.8rem,
+	right:1.6rem,
+	bottom:.8rem,
+	left:.8rem,
+	title-details-gap:.25rem
+);
+$dish-card-title-size: 1.3rem;
+$dish-card-title-extra-padding-right: 3rem;
+$dish-card-complement-size: 1.05rem;
+$dish-card-price-size: 1rem;
+$dish-card-price-margin-left: 2rem;
+$dish-card-transition-properties: 400ms 0s ease-out;
+$dish-card-min-width-ratio: 79%;
+$dish-card-max-width-check: 6rem;
+$dish-card-check-size: 2rem;
+$dish-card-check-left-margin: 1.7rem;
 
+/*Layout and pages properties*/
 $explore-padding: 1rem 1rem 1rem 7.5rem;
 $explore-text-size: 1.1rem;
 $explore-logo-input-gap: 1rem;
@@ -64,7 +92,6 @@ $restaurants__card__description-padding: .9rem 1rem .9rem 1rem;
 $restaurants__card-title-size: 1.3rem;
 $restaurants__card-title-bottom-margin: .3rem;
 $restaurants__card-location-size: 1.15rem;
-
 $restaurant-picture-height: 258px;
 $menu-padding-bottom: 1.8rem;
 $menu-stall-size: 3rem;
@@ -82,23 +109,7 @@ $menu-card-margin: .8rem .8rem 0 .8rem;
 $menu-category-category-gap: 2.6rem;
 $menu-button-padding: 1.1rem 3.5rem;
 
-$dish-card-radius: 1.2rem;
-$dish-card-height: 67px;
-$dish-card-padding: (
-	top:.8rem,
-	right:1.6rem,
-	bottom:.8rem,
-	left:.8rem,
-	title-details-gap:.25rem
-);
-$dish-card-title-size: 1.3rem;
-$dish-card-complement-size: 1.05rem;
-$dish-card-price-size: 1rem;
-$dish-card-transition-properties: 400ms 0s ease-out;
-$dish-card-min-width-ratio: 79%;
-$dish-card-check-size: 2rem;
-$dish-card-check-left-margin: 1.7rem;
-
+/*Footer properties*/
 $footer__title-margin-bottom: 1.1rem;
 $footer__title-font-size: 1.25rem;
 $footer-font-size: 1.1rem;

@@ -1,5 +1,7 @@
+/*Generic properties applying on all the web site*/
 body,
 body * {
+	/*Define borders (when exists) inside the block instead of outside*/
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;

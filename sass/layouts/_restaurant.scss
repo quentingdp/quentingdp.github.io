@@ -1,3 +1,4 @@
+/*Template layout for restaurants web-pages*/
 .restaurant-picture {
 	width: 100%;
 	height: $restaurant-picture-height;
@@ -25,6 +26,7 @@
 		width: 100%;
 		margin-bottom: $menu-category-category-gap;
 
+		/*Double-loop to select all the dish cards (all categories, then all cards inside a category), then offsets their loading animations*/
 		@for $categoryid from 2 through 4 {
 			@for $cardid from 1 through 4 {
 				$duration: 600ms;
@@ -53,6 +55,7 @@
 		font-size: $menu-category-title-size;
 		font-weight: normal;
 
+		/*This pseudo-element is displayed as the evenly widthed underlying of category titles*/
 		&::after {
 			content: "";
 			height: map-get($menu-category-title-underlying, height);
