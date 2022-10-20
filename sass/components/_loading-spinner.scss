@@ -1,0 +1,68 @@
+/*Loading spinner properties*/
+/*Hiding the rest of the body DURING loading spinner, using the hide-body animation without "forwards"*/
+body {
+	animation: hide-body $loading-spinner-duration 0s;
+}
+
+.loading-spinner {
+	background-color: $color-default-invisible;
+	position: absolute;
+	/*Hiding the loading spinner AFTER the animation hide-spinner (without "forwards"), by putting it out of reach*/
+	transform: translateY(-9999px);
+	/*To display the loading spinner on top of everything else, and on full screen*/
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: hide-spinner $loading-spinner-duration 0s;
+
+	p {
+		font-family: $font-titles;
+		font-size: $loading-spinner-size;
+		color: transparent;
+		background-image: linear-gradient(45deg, $color-tertiary, $color-secondary);
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-text-stroke: unset;
+		background-clip: text;
+		-webkit-background-clip: text;
+		animation: animate-spinner $loading-spinner-loop-duration 0s ease-in-out infinite alternate-reverse;
+	}
+}
+
+@keyframes hide-body {
+	from {
+		/*overflow-y: hidden deactivate the vertical scroll*/
+		overflow-y: hidden;
+	}
+
+	to {
+		overflow-y: hidden;
+	}
+}
+
+@keyframes hide-spinner {
+	from {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animate-spinner {
+	0% {
+		background-size: 0% 100%;
+	}
+
+	90% {
+		background-size: 100% 100%;
+	}
+
+	100% {
+		background-size: 100% 100%;
+	}
+}

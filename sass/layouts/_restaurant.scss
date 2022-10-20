@@ -1,0 +1,89 @@
+/*Template layout for restaurants web-pages*/
+.restaurant-picture {
+	width: 100%;
+	height: $restaurant-picture-height;
+	object-fit: cover;
+}
+
+.menu {
+	&__title {
+		@include up-rounded-stall($menu-stall-size);
+		background-color: $color-main-background;
+		padding: $menu-title-padding;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		h1 {
+			font-family: $font-titles;
+			font-size: $menu-title-size;
+		}
+	}
+
+	&__category {
+		@include up-rounded-stall($menu-category-offset);
+		width: 100%;
+		margin-bottom: $menu-category-category-gap;
+
+		/*Double-loop to select all the dish cards (all categories, then all cards inside a category), then offsets their loading animations*/
+		@for $categoryid from 2 through 4 {
+			@for $cardid from 1 through 4 {
+				$duration: 600ms;
+				$offset: calc($duration / 4);
+				/*Formula to offset the cards of Entrées, then Plats, then Desserts*/
+				$delay: calc($offset * (($categoryid - 2) * 4 + $cardid + 1));
+
+				&:nth-of-type(#{$categoryid}) .dish-card:nth-of-type(#{$cardid}) {
+					animation: card-fade-in $duration $delay ease-out backwards;
+				}
+			}
+		}
+	}
+
+	.button {
+		position: relative;
+		top: - $menu-category-offset;
+		padding: $menu-button-padding;
+	}
+
+	h2 {
+		padding: $menu-category-title-padding;
+		display: flex;
+		flex-direction: column;
+		text-transform: uppercase;
+		font-size: $menu-category-title-size;
+		font-weight: normal;
+
+		/*This pseudo-element is displayed as the evenly widthed underlying of category titles*/
+		&::after {
+			content: "";
+			height: map-get($menu-category-title-underlying, height);
+			width: map-get($menu-category-title-underlying, width);
+			margin-top: map-get($menu-category-title-underlying, top-margin);
+			background-color: $color-tertiary;
+		}
+	}
+
+	.dish-card {
+		margin: $menu-card-margin;
+	}
+
+	background-color: $color-main-background;
+	padding-bottom: $menu-padding-bottom;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@keyframes card-fade-in {
+	from {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

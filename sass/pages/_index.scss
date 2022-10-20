@@ -1,0 +1,144 @@
+/*Layout properties of main page*/
+.section-explore-restaurants {
+	&__city {
+		background-color: $color-search-background;
+		padding: $explore-padding;
+
+		@include on-tablet {
+			display: flex;
+			justify-content: center;
+		}
+
+		@include on-desktop {
+			display: flex;
+			justify-content: center;
+		}
+
+
+		label {
+			margin-right: $explore-logo-input-gap;
+		}
+
+		*,
+		input:focus,
+		input::placeholder {
+			background-color: $color-search-background;
+			color: $color-footer-background;
+			font-weight: bold;
+			font-size: $explore-text-size;
+		}
+	}
+
+	&__presentation {
+		background-color: $color-main-background;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: $presentation-padding;
+		text-align: center;
+
+		h1 {
+			font-size: $presentation-header-size;
+			padding: $presentation-header-padding;
+		}
+
+		p {
+			font-size: $presentation-text-size;
+			padding: $presentation-text-padding;
+			color: lighten10($color-footer-background);
+		}
+
+		.button {
+			padding: $presentation-button-padding;
+		}
+	}
+}
+
+.howto-use {
+	padding: $howto-use-padding;
+
+	h2 {
+		font-size: $howto-use-title-size;
+		padding: $howto-use-title-padding;
+	}
+
+	&__step {
+		position: relative;
+
+		&__card {
+			background-color: $color-main-background;
+			box-shadow: $howto-use-step-card-shadow;
+			border-radius: $howto-use-step-card-radius;
+			margin: $howto-use-step-card-margin;
+			padding: $howto-use-step-card-padding;
+			font-weight: bold;
+			font-size: $howto-use-step-card-size;
+
+			&:hover {
+				background-color: $color-howto-hovered-background;
+
+				.howto-use__icon {
+					color: $color-primary;
+				}
+			}
+		}
+
+		&__number {
+			position: absolute;
+			margin-top: nth($howto-use-step-card-padding, 1);
+			left: left-position-howto-number($howto-use-step-card-margin, $howto-use-number-size);
+			color: $color-default-invisible;
+			background-color: $color-primary;
+			@include circle-box($howto-use-number-size);
+		}
+	}
+
+	&__icon {
+		margin-right: $howto-use-icon-text-gap;
+		color: $color-howto-icon;
+	}
+}
+
+
+.restaurants {
+	background-color: $color-main-background;
+	padding: $restaurants-padding;
+
+	@include on-tablet {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	@include on-desktop {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	h2 {
+		font-size: $restaurants-header-size;
+
+		@include on-tablet {
+			width: 100%
+		}
+
+		@include on-desktop {
+			width: 100%
+		}
+	}
+
+	&__card {
+		margin-top: $restaurants-card-card-gap;
+
+		@include on-tablet {
+			width: 47%;
+		}
+
+		@include on-desktop {
+			width: 30%;
+		}
+	}
+}
