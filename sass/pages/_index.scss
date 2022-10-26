@@ -85,7 +85,7 @@
 
 		&__number {
 			position: absolute;
-			margin-top: nth($howto-use-step-card-padding, 1);
+			margin-top: $howto-use-number-margin-top;
 			left: left-position-howto-number($howto-use-step-card-margin, $howto-use-number-size);
 			color: $color-default-invisible;
 			background-color: $color-primary;

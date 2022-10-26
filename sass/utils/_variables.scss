@@ -53,8 +53,7 @@ $dish-card-complement-size: 1.05rem;
 $dish-card-price-size: 1rem;
 $dish-card-price-margin-left: 2rem;
 $dish-card-transition-properties: 400ms 0s ease-out;
-$dish-card-min-width-ratio: 79%;
-$dish-card-max-width-check: 6rem;
+$dish-card-max-width-check: 5.5rem;
 $dish-card-check-size: 2rem;
 $dish-card-check-left-margin: 1.7rem;
 
@@ -72,6 +71,7 @@ $howto-use-padding: 3.2rem 0 3.1rem 0;
 $howto-use-title-size: 1.7rem;
 $howto-use-title-padding: 0 1rem 2.4rem 1.3rem;
 $howto-use-number-size: 1.7rem;
+$howto-use-number-margin-top: 1.9rem;
 $howto-use-step-card-radius: 1.5rem;
 $howto-use-step-card-shadow: 0 .2rem .7rem darken($color-main-background, 15%);
 $howto-use-step-card-margin: 0 1.5rem 1.8rem 2.2rem;
