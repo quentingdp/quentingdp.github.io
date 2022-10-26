@@ -55,27 +55,11 @@
 	}
 
 	&:hover>.dish-card__base {
-		width: $dish-card-min-width-ratio;
-
-		@include on-tablet {
-			width: complementary-ratio($dish-card-max-width-check);
-		}
-
-		@include on-desktop {
-			width: complementary-ratio($dish-card-max-width-check);
-		}
+		width: complementary-ratio($dish-card-max-width-check);
 	}
 
 	&:hover>.dish-card__selected {
-		width: complementary-ratio($dish-card-min-width-ratio);
-
-		@include on-tablet {
-			width: $dish-card-max-width-check;
-		}
-
-		@include on-desktop {
-			width: $dish-card-max-width-check;
-		}
+		width: $dish-card-max-width-check;
 	}
 
 	&:hover .dish-card__selected--check {

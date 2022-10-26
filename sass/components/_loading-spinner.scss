@@ -1,12 +1,7 @@
 /*Loading spinner properties*/
-/*Hiding the rest of the body DURING loading spinner, using the hide-body animation without "forwards"*/
-body {
-	animation: hide-body $loading-spinner-duration 0s;
-}
-
 .loading-spinner {
 	background-color: $color-default-invisible;
-	position: absolute;
+	position: fixed;
 	/*Hiding the loading spinner AFTER the animation hide-spinner (without "forwards"), by putting it out of reach*/
 	transform: translateY(-9999px);
 	/*To display the loading spinner on top of everything else, and on full screen*/
@@ -29,17 +24,6 @@ body {
 		background-clip: text;
 		-webkit-background-clip: text;
 		animation: animate-spinner $loading-spinner-loop-duration 0s ease-in-out infinite alternate-reverse;
-	}
-}
-
-@keyframes hide-body {
-	from {
-		/*overflow-y: hidden deactivate the vertical scroll*/
-		overflow-y: hidden;
-	}
-
-	to {
-		overflow-y: hidden;
 	}
 }
 
